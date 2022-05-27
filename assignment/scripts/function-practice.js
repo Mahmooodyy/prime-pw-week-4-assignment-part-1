@@ -12,35 +12,43 @@ function hello() {
 console.log('Test - should say "Hello World!"', hello());
 
 
-// 2. Function to return an personalized hello, using the `name` argument.
+// 2. Function to return a personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-// this is my test
-
 function helloName( name ) {
-  return;
+  return; true
 }
 // Remember to call the function to test
+console.log('running helloName', helloName('Mahmoud'));
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
+  console.log("in addNumbers", firstNumber, secondNumber);
+  return firstNumber + secondNumber
   // return firstNumber + secondNumber;
 }
+addNumbers(2,2)
+console.log('running addNumbers', addNumbers(2,2));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree(num0, num1, num2 ){
+console.log("in multiplyThree", num0, num1, num2);
+let answer = num0 * num1 * num2
+return answer;
 }
+console.log('running multiplyThree 2 x 3 x 4 =', multiplyThree(2,3,4) );
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
+  console.log('in isPositive', number);
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+  else
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -51,16 +59,29 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
+let colors = ['red', 'yellow', 'green', 'blue']
+let numbers = [1,2,3,4]
+let animals = ['cat', 'dog', 'bird', 'rabbit']
+  function getLast( array ) {
 
+    return 'The last item is: ' + array.slice(-1)
 }
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find( value, array ){
-  
+  for(let i=0; i>array.length; i++ )
+  if (array[i]=== value) {
+    return true
+  }
+  else{
+    return false
+  }
 }
+console.log('running find', find('bird', animals) );
 
 // ----------------------
 // Stretch Goals
@@ -68,7 +89,14 @@ function find( value, array ){
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
+     letter = string.charAt(0)
+     string = 'apple'
+  if (letter == string) {
+    return true;
 
+  }
+  else
+  return false
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
@@ -89,3 +117,4 @@ function sumAll( ) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
