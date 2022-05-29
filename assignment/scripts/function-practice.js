@@ -74,14 +74,13 @@ let animals = ['cat', 'dog', 'bird', 'rabbit']
 
 function find( value, array ){
   for(let i=0; i>array.length; i++ )
-  if (array[i]=== value) {
+  if (value[i]===array) {
     return true
   }
   else{
     return false
   }
-}
-console.log('running find', find('bird', animals) );
+}console.log('running find', find('bird', animals) );
 
 // ----------------------
 // Stretch Goals
@@ -91,12 +90,11 @@ console.log('running find', find('bird', animals) );
 function isFirstLetter(letter, string) {
      letter = string.charAt(0)
      string = 'apple'
-  if (letter == string) {
-    return true;
-
-  }
-  else
-  return false
+     if (letter === string.charAt(0)) {
+       return true
+     } else {
+       return false
+     }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
