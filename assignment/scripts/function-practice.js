@@ -60,11 +60,10 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 let colors = ['red', 'yellow', 'green', 'blue']
-let numbers = [1,2,3,4]
 let animals = ['cat', 'dog', 'bird', 'rabbit']
-  function getLast( array ) {
 
-    return 'The last item is: ' + array.slice(-1)
+function getLast( array ) {
+  return  array.slice(-1)
 }
 
 
@@ -74,7 +73,7 @@ let animals = ['cat', 'dog', 'bird', 'rabbit']
 
 function find( value, array ){
   for(let i=0; i>array.length; i++ )
-  if (value[i]===array) {
+  if (value === array[i]) {
     return true
   }
   else{
